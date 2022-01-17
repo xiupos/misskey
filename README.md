@@ -1,10 +1,15 @@
-# Posky
+# Poskey
 
 [misskey-dev/misskey](https://github.com/misskey-dev/misskey) の Fork.
 
 ## 変更点
 
 ### m@ster-dev
+
+### 12.101.1-posky-12.4
+
+- リリースノートのURLをPoskeyのものに
+- スペルミスの修正
 
 ### 12.101.1-posky-12.3
 
@@ -18,7 +23,7 @@
 ### 12.101.1-posky-12.1
 
 - GitHub Actions で[テスト鯖](https://dev.xiupos.net/)，[本番鯖](https://mk.xiupos.net)にデプロイ
-- ひっぱってくるrelesesのバージョンをPoskyのものに
+- ひっぱってくるrelesesのバージョンをPoskeyのものに
 
 ### 12.101.1-posky-12.0
 
