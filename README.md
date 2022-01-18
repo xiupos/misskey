@@ -6,6 +6,10 @@
 
 ### m@ster-dev
 
+### 12.101.1-posky-12.6
+
+- Page デザインの修正 #5
+
 ### 12.101.1-posky-12.5
 
 - [xianon/misskey@39184c41](https://gitlab.com/xianon/misskey/-/commit/39184c416e3703fa9e96a62bb5048863906a9c05) をコピー
