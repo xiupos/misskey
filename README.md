@@ -1,4 +1,4 @@
-# Poskey
+# ぽすきー
 
 [misskey-dev/misskey](https://github.com/misskey-dev/misskey) の Fork.
 
@@ -6,10 +6,13 @@
 
 ### m@ster-dev
 
+### 12.101.1-posky-12.5
+
+- [xianon/misskey@39184c41](https://gitlab.com/xianon/misskey/-/commit/39184c416e3703fa9e96a62bb5048863906a9c05) をコピー
+
 ### 12.101.1-posky-12.4
 
-- リリースノートのURLをPoskeyのものに
-- スペルミスの修正
+- リリースノートのURLを[ここ](https://github.com/xiupos/misskey)に
 
 ### 12.101.1-posky-12.3
 
@@ -23,7 +26,7 @@
 ### 12.101.1-posky-12.1
 
 - GitHub Actions で[テスト鯖](https://dev.xiupos.net/)，[本番鯖](https://mk.xiupos.net)にデプロイ
-- ひっぱってくるrelesesのバージョンをPoskeyのものに
+- ひっぱってくるrelesesのバージョンをぽすきーのものに
 
 ### 12.101.1-posky-12.0
 
