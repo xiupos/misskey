@@ -1,14 +1,30 @@
 # ぽすきー
 
-[misskey-dev/misskey](https://github.com/misskey-dev/misskey) の Fork.
+Fork of [misskey-dev/misskey](https://github.com/misskey-dev/misskey).
 
-## 変更点
+## Install
+
+```bash
+git clone -b m@ster git+https://github.com/xiupos/misskey.git
+```
+
+And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
+
+## Servers
+
+- `m@ster`: https://mk.xiupos.net
+- `m@ster-dev`: https://dev.xiupos.net (not federated)
+
+## Changelog
 
 ### m@ster-dev
+### 12.101.1-posky-12.7
+
+- Page 編集画面のレイアウトを調整 [#7](https://github.com/xiupos/misskey/pull/7)
 
 ### 12.101.1-posky-12.6
 
-- Page デザインの修正 #5
+- Page デザインの修正 [#5](https://github.com/xiupos/misskey/pull/5#issue-1106950406)
 
 ### 12.101.1-posky-12.5
 
@@ -21,11 +37,11 @@
 ### 12.101.1-posky-12.3
 
 - README.md を独自のものに
-- 登録ボタンを削除
+- 登録ボタンを削除([参考](https://github.com/nullnyat/nca10.net/commit/01185a830b2317ea354de71b1c99466350891916))
 
 ### 12.101.1-posky-12.2
 
-- 色，テーマをオリジナルのものに
+- 色，テーマをオリジナルのものに([参考](https://github.com/nullnyat/nca10.net/commit/a03f330c49b4c57f40e97ed6d550802ab98a3dd4))
 
 ### 12.101.1-posky-12.1
 
