@@ -19,6 +19,10 @@ And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 
 ### m@ster-dev
 
+### 12.103.1-posky-12.8.1
+
+- Merge [12.103.1](https://github.com/misskey-dev/misskey/releases/tag/12.103.1)
+
 ### 12.102.1-posky-12.8.1
 
 - Merge [12.102.1](https://github.com/misskey-dev/misskey/releases/tag/12.102.1)
