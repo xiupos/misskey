@@ -22,11 +22,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: ghcr.io/${{ github.repository_owner }}/misskey
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -65,11 +60,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: ghcr.io/${{ github.repository_owner }}/misskey
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -82,7 +72,7 @@ jobs:
           context: .
           push: true
           platforms: linux/arm64
-          tags: ghcr.io/${{ github.repository_owner }}/misskey:develop
+          tags: ghcr.io/${{ github.repository_owner }}/misskey-aarch64:develop
           labels: develop
           cache-from: type=local,src=/tmp/.buildx-cache-aarch64
           cache-to: type=local,dest=/tmp/.buildx-cache-aarch64-new
