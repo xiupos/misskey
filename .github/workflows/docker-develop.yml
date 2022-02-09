@@ -22,11 +22,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: ghcr.io/${{ github.repository_owner }}/misskey
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -39,8 +34,8 @@ jobs:
           context: .
           push: true
           platforms: linux/amd64
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ghcr.io/${{ github.repository_owner }}/misskey:develop
+          labels: develop
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to: type=local,dest=/tmp/.buildx-cache-new
       - name: Move cache
@@ -65,11 +60,6 @@ jobs:
           key: ${{ runner.os }}-buildx-${{ github.sha }}
           restore-keys: |
             ${{ runner.os }}-buildx-
-      - name: Docker meta
-        id: meta
-        uses: docker/metadata-action@v3
-        with:
-          images: ghcr.io/${{ github.repository_owner }}/misskey-aarch64
       - name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
@@ -82,8 +72,8 @@ jobs:
           context: .
           push: true
           platforms: linux/arm64
-          tags: ${{ steps.meta.outputs.tags }}
-          labels: ${{ steps.meta.outputs.labels }}
+          tags: ghcr.io/${{ github.repository_owner }}/misskey-aarch64:develop
+          labels: develop
           cache-from: type=local,src=/tmp/.buildx-cache-aarch64
           cache-to: type=local,dest=/tmp/.buildx-cache-aarch64-new
       - name: Move cache
