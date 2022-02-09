@@ -8,9 +8,15 @@ Fork of [misskey-dev/misskey](https://github.com/misskey-dev/misskey).
 git clone -b m@ster git+https://github.com/xiupos/misskey.git
 ```
 
+OR
+
+```bash
+docker pull ghcr.io/xiupos/misskey:latest
+```
+
 And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 
-## Servers
+## My Servers
 
 - `m@ster`: https://mk.xiupos.net
 - `m@ster-dev`: https://dev.xiupos.net (not federated)
@@ -18,6 +24,10 @@ And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 ## Changelog
 
 ### m@ster-dev
+
+### 12.104.0-posky-12.9.4
+
+- dockerイメージをaarch64でもビルドするように
 
 ### 12.104.0-posky-12.8.1
 
