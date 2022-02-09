@@ -25,7 +25,7 @@ And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 
 ### m@ster-dev
 
-### 12.104.0-posky-12.9.4
+### 12.104.0-posky-12.9.5
 
 - dockerイメージをaarch64でもビルドするように
 
