@@ -19,6 +19,8 @@ And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 
 ### m@ster-dev
 
+- dockerイメージをマルチアーキテクチャでビルドするように
+
 ### 12.104.0-posky-12.8.1
 
 - Merge [12.104.0](https://github.com/misskey-dev/misskey/releases/tag/12.104.0)
