@@ -40,7 +40,7 @@ jobs:
         with:
           context: .
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
           tags: ghcr.io/${{ github.repository_owner }}/misskey:develop
           labels: develop
           cache-from: type=local,src=/tmp/.buildx-cache
@@ -49,6 +49,49 @@ jobs:
         run: |
           rm -rf /tmp/.buildx-cache
           mv /tmp/.buildx-cache-new /tmp/.buildx-cache
+
+  push_to_registry_arm64:
+    name: Push Docker image to GitHub Container Registry (aarch64)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v1
+      - uses: docker/setup-buildx-action@v1
+      - name: Cache Docker layers
+        uses: actions/cache@v2
+        with:
+          path: /tmp/.buildx-cache-aarch64
+          key: ${{ runner.os }}-buildx-${{ github.sha }}
+          restore-keys: |
+            ${{ runner.os }}-buildx-
+      - name: Docker meta
+        id: meta
+        uses: docker/metadata-action@v3
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/misskey
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v1
+        with:
+          registry: ghcr.io
+          username: ${{ github.repository_owner }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build and Push to GitHub Container Registry
+        uses: docker/build-push-action@v2
+        with:
+          context: .
+          push: true
+          platforms: linux/arm64
+          tags: ghcr.io/${{ github.repository_owner }}/misskey:develop
+          labels: develop
+          cache-from: type=local,src=/tmp/.buildx-cache-aarch64
+          cache-to: type=local,dest=/tmp/.buildx-cache-aarch64-new
+      - name: Move cache
+        run: |
+          rm -rf /tmp/.buildx-cache-aarch64
+          mv /tmp/.buildx-cache-aarch64-new /tmp/.buildx-cache-aarch64
 
   deploy:
     name: Deploy to Test Server
