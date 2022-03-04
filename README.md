@@ -19,7 +19,7 @@ And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 ## My Servers
 
 - `m@ster`: https://mk.xiupos.net
-- `m@ster-dev`: https://dev.xiupos.net (not federated)
+- `m@ster-dev`: https://posky-dev.x4s.io (not federated)
 
 ## Changelog
 
