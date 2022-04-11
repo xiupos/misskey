@@ -16,6 +16,17 @@ docker pull ghcr.io/xiupos/misskey:latest
 
 And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 
+## Develop
+
+```bash
+git clone git@github.com:xiupos/misskey
+cd misskey
+
+git remote add misskey-dev git@github.com:misskey-dev/misskey
+git fetch misskey-dev
+git checkout -b misskey-dev-master misskey-dev/master
+```
+
 ## My Servers
 
 - `m@ster`: https://mk.xiupos.net
