@@ -16,6 +16,17 @@ docker pull ghcr.io/xiupos/misskey:latest
 
 And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 
+## Develop
+
+```bash
+git clone git@github.com:xiupos/misskey
+cd misskey
+
+git remote add misskey-dev git@github.com:misskey-dev/misskey
+git fetch misskey-dev
+git checkout -b misskey-dev-master misskey-dev/master
+```
+
 ## My Servers
 
 - `m@ster`: https://mk.xiupos.net
@@ -24,6 +35,10 @@ And see [Misskey Hub](https://misskey-hub.net/en/docs/install/docker.html).
 ## Changelog
 
 ### m@ster-dev
+
+### 12.110.1-posky-12.9.7
+
+- Merge [12.110.1](https://github.com/misskey-dev/misskey/releases/tag/12.110.1)
 
 ### 12.110.0-posky-12.9.7
 
