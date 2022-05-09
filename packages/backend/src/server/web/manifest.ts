@@ -1,6 +1,7 @@
 import Koa from 'koa';
 import manifest from './manifest.json' assert { type: 'json' };
 import { fetchMeta } from '@/misc/fetch-meta.js';
+import useragent from 'express-useragent';
 
 export const manifestHandler = async (ctx: Koa.Context) => {
 	const json = JSON.parse(JSON.stringify(manifest));

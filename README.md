@@ -36,6 +36,10 @@ git checkout -b misskey-dev-master misskey-dev/master
 
 ### m@ster-dev
 
+### 12.110.1-posky-12.9.8
+
+- Fix manifest (Thanks [@xianon](https://mk.xiupos.net/notes/9029rnz771))
+
 ### 12.110.1-posky-12.9.7
 
 - Merge [12.110.1](https://github.com/misskey-dev/misskey/releases/tag/12.110.1)
