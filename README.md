@@ -36,6 +36,8 @@ git checkout -b misskey-dev-master misskey-dev/master
 
 ### m@ster-dev
 
+- Follow [misskey-dev/master](https://github.com/misskey-dev/misskey/commit/3658f19d9800f331b3331080ac700dbae5db987a)
+
 ### 12.110.1-posky-12.9.8
 
 - Fix manifest (Thanks [@xianon](https://mk.xiupos.net/notes/9029rnz771))
