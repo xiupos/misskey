@@ -20,7 +20,7 @@ const modal = ref();
 
 const whatIsNew = () => {
 	modal.value.close();
-	window.open(`https://github.com/xiupos/misskey#${version.replace(/\./g, '')}`, '_blank');
+	window.open(`https://github.com/misskey-dev/misskey/blob/develop/CHANGELOG-poskey.md#${version.replace(/\./g, '')}`, '_blank');
 };
 </script>
 
