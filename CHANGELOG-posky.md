@@ -1,5 +1,7 @@
 ### m@ster-dev
 
+### 12.110.1-posky-12.10.2
+
 - Follow [misskey-dev/master](https://github.com/misskey-dev/misskey/commit/3658f19d9800f331b3331080ac700dbae5db987a)
 
 - Move changelog to CHANGELOG-posky.md
