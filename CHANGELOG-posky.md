@@ -1,5 +1,7 @@
 ### m@ster-dev
 
+- Revert [324c703](https://github.com/xiupos/misskey/commit/324c70393c3bfab154a6657f12fc90ed1ed8a861)
+
 ### 12.110.1-posky-12.10.2
 
 - Follow [misskey-dev/master](https://github.com/misskey-dev/misskey/commit/3658f19d9800f331b3331080ac700dbae5db987a)
