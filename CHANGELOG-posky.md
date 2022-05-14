@@ -4,6 +4,8 @@
 
 - Move changelog to CHANGELOG-posky.md
 
+- Remove aarch64 image
+
 ### 12.110.1-posky-12.9.8
 
 - Fix manifest (Thanks [@xianon](https://mk.xiupos.net/notes/9029rnz771))
