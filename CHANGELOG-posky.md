@@ -4,6 +4,8 @@
 
 - Stop using buildx
 
+- Merge [12.111.1](https://github.com/misskey-dev/misskey/releases/tag/12.111.1)
+
 ### 12.110.1-posky-12.11.0
 
 - Revert [324c703](https://github.com/xiupos/misskey/commit/324c70393c3bfab154a6657f12fc90ed1ed8a861)
