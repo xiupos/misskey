@@ -1,5 +1,7 @@
 ### m@ster-dev
 
+### 12.111.1-posky-12.11.1
+
 - Merge [12.111.0](https://github.com/misskey-dev/misskey/releases/tag/12.111.0)
 
 - Stop using buildx
