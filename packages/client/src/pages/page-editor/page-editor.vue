@@ -43,7 +43,7 @@
 	</div>
 
 	<div v-else-if="tab === 'contents'">
-		<div class="gwbmwxkm">
+		<div>
 			<XBlocks v-model="content" class="content" :hpml="hpml"/>
 
 			<MkButton v-if="!readonly" @click="add()"><i class="fas fa-plus"></i></MkButton>
@@ -114,7 +114,7 @@ export default defineComponent({
 			readonly: this.readonly,
 			getScriptBlockList: this.getScriptBlockList,
 			getPageBlockList: this.getPageBlockList
-		}
+		};
 	},
 
 	props: {
@@ -466,8 +466,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .jqqmcavi {
-	margin: 0 0 1.5em;
-
 	> .button {
 		& + .button {
 			margin-left: 8px;
@@ -475,28 +473,74 @@ export default defineComponent({
 	}
 }
 
-._formRoot {
+.gwbmwxkm {
+	position: relative;
 
-	> .eyeCatch {
-		margin-bottom: 16px;
+	> header {
+		> .title {
+			z-index: 1;
+			margin: 0;
+			padding: 0 16px;
+			line-height: 42px;
+			font-size: 0.9em;
+			font-weight: bold;
+			box-shadow: 0 1px rgba(#000, 0.07);
 
-		> div {
-			> img {
-				margin: 16px 0;
-				max-width: 100%;
+			> i {
+				margin-right: 6px;
+			}
+
+			&:empty {
+				display: none;
+			}
+		}
+
+		> .buttons {
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			right: 0;
+
+			> button {
+				padding: 0;
+				width: 42px;
+				font-size: 0.9em;
+				line-height: 42px;
+			}
+		}
+	}
+
+	> section {
+		padding: 0 32px 32px 32px;
+
+		@media (max-width: 500px) {
+			padding: 0 16px 16px 16px;
+		}
+
+		> .view {
+			display: inline-block;
+			margin: 16px 0 0 0;
+			font-size: 14px;
+		}
+
+		> .content {
+			margin-bottom: 16px;
+		}
+
+		> .eyeCatch {
+			margin-bottom: 16px;
+
+			> div {
+				> img {
+					max-width: 100%;
+				}
 			}
 		}
 	}
 }
 
-.gwbmwxkm {
-
-	> .content {
-		margin-bottom: 16px;
-	}
-}
-
 .qmuvgica {
+	padding: 16px;
 
 	> .variables {
 		margin-bottom: 16px;
