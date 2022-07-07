@@ -1,5 +1,9 @@
 ### m@ster-dev
 
+### 12.112.1-posky-12.11.2
+
+- Cherry-pick [7623a26](https://github.com/outloudvi/misskey/commit/7623a264e240888f47143c4984977c0769ef3809) by [outloudvi](https://github.com/outloudvi)
+
 ### 12.112.1-posky-12.11.1
 
 - Merge [12.112.1](https://github.com/misskey-dev/misskey/releases/tag/12.112.1)
