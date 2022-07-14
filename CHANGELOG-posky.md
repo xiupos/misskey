@@ -1,5 +1,9 @@
 ### m@ster-dev
 
+### 12.113.0-posky-12.11.2
+
+- Merge [12.113.0](https://github.com/misskey-dev/misskey/releases/tag/12.113.0)
+
 ### 12.112.3-posky-12.11.2
 
 - Revert [e6b9137](https://github.com/xiupos/misskey/commit/e6b91372949d317bcf6ed580d6c7278f7c15f754)
