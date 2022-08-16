@@ -25,6 +25,7 @@ export const getBuiltinThemes = () => Promise.all(
 		'l-vivid',
 		'l-cherry',
 		'l-sushi',
+		'l-u0',
 
 		'd-dark',
 		'd-yuko',
@@ -36,6 +37,7 @@ export const getBuiltinThemes = () => Promise.all(
 		'd-green-orange',
 		'd-cherry',
 		'd-ice',
+		'd-u0',
 	].map(name => import(`../themes/${name}.json5`).then(({ default: _default }): Theme => _default)),
 );
 
