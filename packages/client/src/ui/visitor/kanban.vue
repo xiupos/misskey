@@ -40,10 +40,10 @@
 import { defineComponent, defineAsyncComponent } from 'vue';
 import { host, instanceName } from '@/config';
 import * as os from '@/os';
-import MkPagination from '@/components/ui/pagination.vue';
-import XSigninDialog from '@/components/signin-dialog.vue';
-import XSignupDialog from '@/components/signup-dialog.vue';
-import MkButton from '@/components/ui/button.vue';
+import MkPagination from '@/components/MkPagination.vue';
+import XSigninDialog from '@/components/MkSigninDialog.vue';
+import XSignupDialog from '@/components/MkSignupDialog.vue';
+import MkButton from '@/components/MkButton.vue';
 
 export default defineComponent({
 	components: {
@@ -92,16 +92,16 @@ export default defineComponent({
 	methods: {
 		signin() {
 			os.popup(XSigninDialog, {
-				autoSet: true
+				autoSet: true,
 			}, {}, 'closed');
 		},
 
 		signup() {
 			os.popup(XSignupDialog, {
-				autoSet: true
+				autoSet: true,
 			}, {}, 'closed');
-		}
-	}
+		},
+	},
 });
 </script>
 
