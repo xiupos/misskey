@@ -1,5 +1,9 @@
 ### m@ster-dev
 
+### 12.119.1-posky-12.11.2
+
+- Merge [12.119.1](https://github.com/misskey-dev/misskey/releases/tag/12.119.1)
+
 ### 12.119.0-posky-12.11.2
 
 - Merge [12.119.0](https://github.com/misskey-dev/misskey/releases/tag/12.119.0)
