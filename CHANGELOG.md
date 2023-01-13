@@ -29,8 +29,9 @@ You should also include the user name that made the change.
 	- You may have to `yarn run clean-all`, `sudo corepack enable` and `yarn set version berry` before running `yarn install` if you're still on yarn classic
 - 従来のモデレーターフラグは廃止され、より高度なロール機能が導入されました
 	- これに伴い、アップデートを行うと全てのモデレーターフラグは失われます。そのため、予めモデレーター一覧を記録しておき、アップデート後にモデレーターロールを作りアサインし直してください。
-	- サイレンスはロールに統合されました
+	- サイレンスはロールに統合されました。今までのユーザーは恩赦されるため、予めサイレンス一覧を記録しておくのをおすすめします。
 	- ユーザーごとのドライブ容量設定はロールに統合されました
+	- インスタンスデフォルトのドライブ容量設定はロールに統合されました。アップデート後、ベースロールのドライブ容量を編集してください。
 	- LTL/GTLの解放状態はロールに統合されました
 
 #### For users
@@ -67,6 +68,7 @@ You should also include the user name that made the change.
 - Add Cloudflare Turnstile CAPTCHA support @CyberRex0
 - Server: signToActivityPubGet is set to true by default @syuilo
 - Server: improve syslog performance @syuilo
+- Server: Use undici instead of node-fetch and got @tamaina
 - Server: improve note scoring for featured notes @CyberRex0
 - Server: アンケート選択肢の文字数制限を緩和 @syuilo
 - Server: improve stats api performance @syuilo
