@@ -1,6 +1,6 @@
 {
 	"name": "misskey",
-	"version": "13.0.0-beta.43-posky",
+	"version": "13.0.0-rc.3-posky",
 	"codename": "indigo",
 	"repository": {
 		"type": "git",

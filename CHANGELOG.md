@@ -76,6 +76,7 @@ You should also include the user name that made the change.
 - 非モデレーターでも、権限を持つロールをアサインされたユーザーはインスタンスの招待コードを発行できるように @syuilo
 - 非モデレーターでも、権限を持つロールをアサインされたユーザーはカスタム絵文字の追加、編集、削除を行えるように @syuilo
 - ハードワードミュートの最大文字数を設定可能に @syuilo
+- Webhookの作成可能数を設定可能に @syuilo
 - Server: signToActivityPubGet is set to true by default @syuilo
 - Server: improve syslog performance @syuilo
 - Server: Use undici instead of node-fetch and got @tamaina
@@ -132,6 +133,7 @@ You should also include the user name that made the change.
 - Server: 非公開のクリップのURLでOGPレンダリングされる問題を修正 @syuilo
 - Server: アンテナタイムライン（ストリーミング）が、フォローしていないユーザーの鍵投稿も拾ってしまう @syuilo
 - Server: follow request list api pagination @sim1222
+- Server: ドライブ容量超過時のエラーが適切にレスポンスされない問題を修正 @syuilo
 - Client: パスワードマネージャーなどでユーザー名がオートコンプリートされない問題を修正 @massongit
 - Client: 日付形式の文字列などがカスタム絵文字として表示されるのを修正 @syuilo
 - Client: case insensitive emoji search @saschanaz
