@@ -6,12 +6,19 @@
 			<option value="isRemote">{{ i18n.ts._role._condition.isRemote }}</option>
 			<option value="createdLessThan">{{ i18n.ts._role._condition.createdLessThan }}</option>
 			<option value="createdMoreThan">{{ i18n.ts._role._condition.createdMoreThan }}</option>
+			<option value="followersLessThanOrEq">{{ i18n.ts._role._condition.followersLessThanOrEq }}</option>
+			<option value="followersMoreThanOrEq">{{ i18n.ts._role._condition.followersMoreThanOrEq }}</option>
+			<option value="followingLessThanOrEq">{{ i18n.ts._role._condition.followingLessThanOrEq }}</option>
+			<option value="followingMoreThanOrEq">{{ i18n.ts._role._condition.followingMoreThanOrEq }}</option>
 			<option value="and">{{ i18n.ts._role._condition.and }}</option>
 			<option value="or">{{ i18n.ts._role._condition.or }}</option>
 			<option value="not">{{ i18n.ts._role._condition.not }}</option>
 		</MkSelect>
 		<button v-if="draggable" class="drag-handle _button" :class="$style.dragHandle">
 			<i class="ti ti-menu-2"></i>
+		</button>
+		<button v-if="draggable" class="_button" :class="$style.remove" @click="removeSelf">
+			<i class="ti ti-x"></i>
 		</button>
 	</div>
 
@@ -20,7 +27,7 @@
 			<template #item="{element}">
 				<div :class="$style.item">
 					<!-- divが無いとエラーになる https://github.com/SortableJS/vue.draggable.next/issues/189 -->
-					<RolesEditorFormula :model-value="element" draggable @update:model-value="updated => valuesItemUpdated(updated)"/>
+					<RolesEditorFormula :model-value="element" draggable @update:model-value="updated => valuesItemUpdated(updated)" @remove="removeItem(element)"/>
 				</div>
 			</template>
 		</Sortable>
@@ -33,6 +40,9 @@
 
 	<MkInput v-else-if="type === 'createdLessThan' || type === 'createdMoreThan'" v-model="v.sec" type="number">
 		<template #suffix>sec</template>
+	</MkInput>
+
+	<MkInput v-else-if="['followersLessThanOrEq', 'followersMoreThanOrEq', 'followingLessThanOrEq', 'followingMoreThanOrEq'].includes(type)" v-model="v.value" type="number">
 	</MkInput>
 </div>
 </template>
@@ -55,6 +65,7 @@ const Sortable = defineAsyncComponent(() => import('vuedraggable').then(x => x.d
 
 const emit = defineEmits<{
 	(ev: 'update:modelValue', value: any): void;
+	(ev: 'remove'): void;
 }>();
 
 const props = defineProps<{
@@ -81,6 +92,10 @@ const type = computed({
 		if (t === 'not') v.value.value = { id: uuid(), type: 'isRemote' };
 		if (t === 'createdLessThan') v.value.sec = 86400;
 		if (t === 'createdMoreThan') v.value.sec = 86400;
+		if (t === 'followersLessThanOrEq') v.value.value = 10;
+		if (t === 'followersMoreThanOrEq') v.value.value = 10;
+		if (t === 'followingLessThanOrEq') v.value.value = 10;
+		if (t === 'followingMoreThanOrEq') v.value.value = 10;
 		v.value.type = t;
 	},
 });
@@ -92,6 +107,14 @@ function addValue() {
 function valuesItemUpdated(item) {
 	const i = v.value.values.findIndex(_item => _item.id === item.id);
 	v.value.values[i] = item;
+}
+
+function removeItem(item) {
+	v.value.values = v.value.values.filter(_item => _item.id !== item.id);
+}
+
+function removeSelf() {
+	emit('remove');
 }
 </script>
 
@@ -110,6 +133,10 @@ function valuesItemUpdated(item) {
 
 .dragHandle {
 	cursor: move;
+	margin-left: 10px;
+}
+
+.remove {
 	margin-left: 10px;
 }
 
