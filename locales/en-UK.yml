@@ -1,0 +1,56 @@
+---
+_lang_: "English (United Kingdom)"
+introMisskey: "Welcome! Misskey is an open source, decentralised microblogging service.\nCreate \"notes\" to share your thoughts with everyone around you. 📡\nWith \"reactions\", you can also quickly express your feelings about everyone's notes. 👍\nLet's explore a new world! 🚀"
+favorite: "Add to favourites"
+favorites: "Favourites"
+unfavorite: "Remove from favourites"
+favorited: "Added to favourites."
+alreadyFavorited: "Already added to favourites."
+cantFavorite: "Couldn't add to favourites."
+flagAsBotDescription: "Enable this option if this account is controlled by a programme. If enabled, it will act as a flag for other developers to prevent endless interaction chains with other bots and adjust Misskey's internal systems to treat this account as a bot."
+checking: "Chequing..."
+installedApps: "Authorised Applications"
+installedDate: "Authorised at"
+scratchpadDescription: "The Scratchpad provides an environment for AiScript experiments. You can write, execute, and cheque the results of it interacting with Misskey in it."
+behavior: "Behaviour"
+defaultNavigationBehaviour: "Default navigation behaviour"
+noteFavoritesCount: "Number of favourite notes"
+center: "Centre"
+backgroundColor: "Background colour"
+accentColor: "Accent colour"
+textColor: "Text colour"
+themeColor: "Instance Ticker Colour"
+check: "Cheque"
+colored: "Coloured"
+activeEmailValidationDescription: "Enables stricter validation of email addresses, which includes chequing for disposable addresses and by whether it can actually be communicated with. When unchequed, only the format of the email is validated."
+windowMaximize: "Maximise"
+color: "Colour"
+_sensitiveMediaDetection:
+  description: "Reduces the effort of server moderation through automatically recognising NSFW media via Machine Learning. This will slightly increase the load on the server."
+  analyzeVideosDescription: "Analyses videos in addition to images. This will slightly increase the load on the server."
+_mfm:
+  center: "Centre"
+  centerDescription: "Displays content centred."
+  inlineCodeDescription: "Displays inline syntax highlighting for (programme) code."
+  blockCodeDescription: "Displays syntax highlighting for multi-line (programme) code in a block."
+  inlineMathDescription: "Display math formulae (KaTeX) in-line"
+  blockMathDescription: "Display multi-line math formulae (KaTeX) in a block"
+  rainbowDescription: "Makes the content appear in rainbow colours."
+_serverDisconnectedBehavior:
+  dialog: "Show warning dialogue"
+_theme:
+  color: "Colour"
+_tutorial:
+  step4_2: "Hurrah! Now your first note should be displayed on your timeline."
+_2fa:
+  step2Url: "You can also enter this URL if you're using a desktop programme:"
+_permissions:
+  "read:favorites": "View your list of favourites"
+  "write:favorites": "Edit your list of favourites"
+_auth:
+  shareAccess: "Would you like to authorise \"{name}\" to access this account?"
+  shareAccessAsk: "Are you sure you want to authorise this application to access your account?"
+_exportOrImport:
+  favoritedNotes: "Favourite notes"
+_pages:
+  alignCenter: "Centre elements"

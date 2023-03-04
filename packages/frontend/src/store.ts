@@ -96,13 +96,9 @@ export const defaultStore = markRaw(new Storage('base', {
 			'notifications',
 			'favorites',
 			'drive',
-			'followRequests',
 			'-',
-			'explore',
-			'announcements',
+			'antennas',
 			'search',
-			'-',
-			'ui',
 		],
 	},
 	visibility: {
@@ -195,7 +191,7 @@ export const defaultStore = markRaw(new Storage('base', {
 	},
 	showFixedPostForm: {
 		where: 'device',
-		default: false,
+		default: true,
 	},
 	enableInfiniteScroll: {
 		where: 'device',
@@ -211,11 +207,11 @@ export const defaultStore = markRaw(new Storage('base', {
 	},
 	darkMode: {
 		where: 'device',
-		default: false,
+		default: true,
 	},
 	instanceTicker: {
 		where: 'device',
-		default: 'remote' as 'none' | 'remote' | 'always',
+		default: 'always' as 'none' | 'remote' | 'always',
 	},
 	reactionPickerSize: {
 		where: 'device',
@@ -309,7 +305,7 @@ interface Watcher {
  */
 import { miLocalStorage } from './local-storage';
 import lightTheme from '@/themes/l-light.json5';
-import darkTheme from '@/themes/d-green-lime.json5';
+import darkTheme from '@/themes/d-ribbon.json5';
 import { Note, UserDetailed } from 'misskey-js/built/entities';
 
 export class ColdDeviceStorage {
@@ -319,7 +315,7 @@ export class ColdDeviceStorage {
 		syncDeviceDarkMode: true,
 		plugins: [] as Plugin[],
 		mediaVolume: 0.5,
-		sound_masterVolume: 0.5,
+		sound_masterVolume: 0,
 		sound_note: { type: 'syuilo/n-aec', volume: 0.5 },
 		sound_noteMy: { type: 'syuilo/n-cea', volume: 0.5 },
 		sound_notification: { type: 'syuilo/n-ea', volume: 0.5 },

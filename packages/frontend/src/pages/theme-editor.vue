@@ -46,7 +46,7 @@
 				<template #label>{{ i18n.ts.editCode }}</template>
 
 				<div class="_gaps_m">
-					<MkTextarea v-model="themeCode" tall>
+					<MkTextarea v-model="themeCode" class="_monospace" tall>
 						<template #label>{{ i18n.ts._theme.code }}</template>
 					</MkTextarea>
 					<MkButton primary @click="applyThemeCode">{{ i18n.ts.apply }}</MkButton>
